@@ -453,6 +453,11 @@ label {
   line-height: 30px;
   margin-bottom: 11px;
 }
+.hex-content .icon img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+}
+
 .hex-content .title {
   display: block;
   font-family: "Open Sans", sans-serif;
@@ -558,6 +563,12 @@ label {
   -moz-align-items: flex-end;
   align-items: flex-end;
   transition: all 0.3s ease 0s;
+}
+.skill-frequency {
+  font-weight: bold;
+  font-size: 1em;
+  color: #555;
+  margin-left: 10px;
 }
 
 .filter {
