@@ -516,12 +516,12 @@ label {
 /*------------------------------------------------
     About Page
 -------------------------------------------------*/
+
 .about-author {
   margin-bottom: 23px;
-  -moz-align-items: center;
-  align-items: center;
-  display: -moz-flex;
   display: flex;
+  /* flex-wrap: wrap; Enable wrapping for responsive design */
+  gap: 5px; /* Add spacing between images */
 }
 .about-author .author-thumb {
   background-color: #fff;
@@ -533,6 +533,8 @@ label {
   border: 2px solid #1e2530;
   width: 145px;
 }
+
+
 .about-author .author-desc p {
   color: #1e2530;
   font-family: "Open Sans", sans-serif;
@@ -1358,8 +1360,8 @@ label {
     margin-left: auto;
   }
   .page-home .hexagon-item:nth-last-child(1),
-.page-home .hexagon-item:nth-last-child(2),
-.page-home .hexagon-item:nth-last-child(3) {
+  .page-home .hexagon-item:nth-last-child(2),
+  .page-home .hexagon-item:nth-last-child(3) {
     transform: rotate(30deg) translate(0px, 0px);
   }
   .author-image-large {
@@ -1372,14 +1374,19 @@ label {
     margin: 0 auto;
     width: 50%;
   }
-  .about-author {
+  /* .about-author {
     display: block;
-  }
+  } */
   .about-author .author-thumb {
     border: 0 none;
     margin-bottom: 15px;
     margin-right: 0;
     padding: 0;
+  }
+  .about-author .author-thumb2 {
+    border: 0 none;
+    margin-right: 0px;
+    padding: 5px;
   }
   .about-author .author-desc b {
     display: block;
