@@ -161,6 +161,17 @@ label {
   color: #47118f;
 }
 
+.custom-link {
+  color: #757376; /* Change to your desired color */
+  font-style: italic; /* Makes the text italic */
+
+}
+.custom-link:hover {
+  color: #717071; /* Optional: hover color */
+  text-decoration: underline; /* Optional: add underline on hover */
+
+}
+
 .no-gutter {
   margin-left: 0;
   margin-right: 0;
@@ -253,10 +264,21 @@ label {
 
 .page-title {
   margin-bottom: 75px;
+  margin-top: 50px;
+
 }
-.page-title img {
+/* .page-title img {
   margin-bottom: 20px;
+} */
+.page-title img {
+  display: block; /* Ensures it behaves predictably in the layout */
+  max-width: 100%; /* Ensures it does not exceed the width of its container */
+  height: auto; /* Maintains the aspect ratio */
+  margin: 0 auto; /* Centers the image if needed */
+  margin-bottom: 20px;
+
 }
+
 .page-title h2 {
   font-size: 68px;
   margin-bottom: 25px;
