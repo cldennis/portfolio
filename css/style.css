@@ -514,6 +514,84 @@ label {
 }
 
 /*------------------------------------------------
+   Resume Page Page
+-------------------------------------------------*/
+
+/* General Resume Styling */
+.resume {
+  font-family: 'Libre Baskerville', serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #faf5f5;
+  border-radius: 10px;
+
+}
+
+/* Header Styling */
+.resume-header {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #616161;
+  margin-bottom: 20px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.8em;
+  color: #555;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+/* Section Content */
+.section-content {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #2f2d2d;
+}
+.section-content2 {
+  font-size: 2em;
+  color: #555;
+  text-transform: uppercase;
+}
+.section-content3 {
+  font-size: .8em;
+  color: #7a797b;
+  text-transform: capitalize;
+}
+/* Lists Styling */
+.resume-list {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.resume-list li {
+  margin-bottom: 5px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .resume {
+      padding: 10px;
+  }
+
+  .resume-header {
+      font-size: 2em;
+  }
+
+  .section-title {
+      font-size: 1.5em;
+  }
+}
+
+/*------------------------------------------------
     About Page
 -------------------------------------------------*/
 
@@ -714,6 +792,20 @@ label {
   font-weight: 600;
   letter-spacing: 0.96px;
   text-transform: uppercase;
+}
+.history-item h4 {
+  color: #dfdede;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+}
+.history-item h3 {
+  color: #b7b6b6;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.96px;
+  text-transform: none;
 }
 .history-item span {
   color: #aaaaaa;
@@ -1117,6 +1209,8 @@ label {
 }
 .pt-table.desktop-768 .pt-tablecell .page-nav {
   bottom: 40px;
+  position: absolute;
+
 }
 
 /* =================================== */
