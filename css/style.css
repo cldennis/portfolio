@@ -525,12 +525,12 @@ label {
 }
 .about-author .author-thumb {
   background-color: #fff;
-  border: 5px solid #1e2530;
+  border: 5px solid #6f6d69;
   margin-right: 30px;
   padding: 5px;
 }
 .about-author .author-thumb img {
-  border: 2px solid #1e2530;
+  border: 2px solid #b0b1b3;
   width: 145px;
 }
 
