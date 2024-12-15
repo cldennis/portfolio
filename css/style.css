@@ -267,20 +267,32 @@ label {
   margin-top: 50px;
 
 }
-/* .page-title img {
+.page-title2 {
+  margin-bottom: 100%;
+  margin-top: 10px;
+
+}
+.page-title img {
   margin-bottom: 20px;
-} */
+}
 .page-title img {
   display: block; /* Ensures it behaves predictably in the layout */
   max-width: 100%; /* Ensures it does not exceed the width of its container */
   height: auto; /* Maintains the aspect ratio */
   margin: 0 auto; /* Centers the image if needed */
   margin-bottom: 20px;
-
 }
 
 .page-title h2 {
   font-size: 68px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.page-title2 h2 {
+  font-size: 50px;
   margin-bottom: 25px;
   position: relative;
   z-index: 0;
@@ -598,7 +610,7 @@ label {
 .about-author {
   margin-bottom: 23px;
   display: flex;
-  /* flex-wrap: wrap; Enable wrapping for responsive design */
+  flex-wrap: wrap; 
   gap: 5px; /* Add spacing between images */
 }
 .about-author .author-thumb {
@@ -894,6 +906,12 @@ label {
 .service-hex:hover p {
   height: 72px;
 }
+.hexagon-link {
+  display: inline-block; /* Makes the link span the entire hexagon */
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit; /* Keeps text color as is */
+}
+
 
 .testimonials .item {
   padding-top: 33px;
@@ -1468,9 +1486,9 @@ label {
     margin: 0 auto;
     width: 50%;
   }
-  /* .about-author {
+  .about-author {
     display: block;
-  } */
+  }
   .about-author .author-thumb {
     border: 0 none;
     margin-bottom: 15px;
