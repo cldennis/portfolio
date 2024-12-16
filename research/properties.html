@@ -50,10 +50,9 @@ FACEBOOK: https://www.facebook.com/themefisher
   
   <!-- Theme Stylesheet -->
   <link rel="stylesheet" href="#" id="color-changer">
-  
+
   <!--Website Bar Icon-->
   <link rel="icon" href="../images/favicon.png">
-
 </head>
 <body><!-- set class="dark" on body tag for DARK-THEME -->
 
@@ -64,16 +63,15 @@ FACEBOOK: https://www.facebook.com/themefisher
 
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+          <div class="col-xs-12 col-md-offset-1 col-md-12 col-lg-offset-1 col-lg-10">
             <div class="page-title2 text-center">
               <h2><span class="primary">US Parcels to Properties</span> </h2>
-              <p>I used attributes associated with US tax parcels like the parcel owner's name and address to match disparate parcels into contiguous property boundaries. </p>
+              <p>I used attributes associated with US tax parcels like the parcel owner's name and address to match disparate parcels into contiguous property boundaries. I have a national dataset of properties for the year 2023 and a 10 year dataset through time of Wisconsin thanks to the Wisconsin State Cartographer's Office annual statewide parcel layer.</p>
               <ul class="filter list-inline">
                 <li><a href="#" class="active" data-filter="*">All</a></li>
                 <li><a href="#" data-filter=".Process">Process</a></li>
                 <li><a href="#" data-filter=".Presentations">Presentations</a></li>
-                <li><a href="#" data-filter=".Projects">Projects</a></li>
-                <li><a href="#" data-filter=".Artworks">Artworks</a></li>
+                <li><a href="#" data-filter=".WI">WI Through Time</a></li>
               </ul>
               <div class="row isotope-gutter">
                 <div class="col-xs-12 col-sm-8 col-md-6 Process">
@@ -104,12 +102,49 @@ FACEBOOK: https://www.facebook.com/themefisher
                     </figcaption>
                   </figure>
                   </div>
-               
-
-               
-
-
-
+                  <div class="col-xs-12 col-sm-8 col-md-6 Presentations">
+                    <br>
+                    <figure class="works-item">
+                      <img
+                          src="dia.png"
+                          alt="Example"
+                          class="zoomable-image"
+                          onclick="this.classList.toggle('zoomed')">
+                    </figure>
+                    <h4>Data in Action 2024</h4>
+                    <p>Presented poster at UW Madison's annual research bazaar.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-6 WI">
+                      <br>
+                      <h4>Wisconsin Land Ownership Through Time</h4>
+                      <p>Storymap, 2024</p>
+                       <figure class="works-item">
+                        <iframe
+                        src="https://storymaps.arcgis.com/stories/9fc565d40c0d487d9f34eb8e1dcffee3"
+                        class="story-map"
+                        allowfullscreen>
+                      </iframe>
+                      </figure>
+                      <p>
+                        Click <a href="#" data-toggle="modal" data-target="#artistStatementModal" class="custom-link">here </a> for my artist statement about this project.
+                      </p>
+                    
+                      <!-- Modal -->
+                      <div class="modal fade" id="artistStatementModal" tabindex="-1" role="dialog" aria-labelledby="artistStatementLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                              <h4 class="modal-title" id="artistStatementLabel">Artist Statement</h4>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                As a geographer and data scientist, I made a story map that combined scrollytelling with spatial analysis. My goal was to create a compelling narrative using data I made for my research as the foundation of the maps and graphics. This project was inspired by the relationship between land use change and property ownership through time in Grant County, Wisconsin between 2014 and 2024. I chose the 3-act narrative to guide the story. I used land cover data from the Cropland Data Layer and property boundaries through time I created from Wisconsin tax parcels. Most of the process was in the data creation, so my challenge was creating a story from data rather than picking a topic and finding data to support it. ArcGIS StoryMaps is a platform for scrollytelling, which I found to be effective for presenting this project’s narrative. The ability to show maps and text sequentially as users scroll allowed me to guide the audience through each stage of the three-act structure. Scrollytelling, rather than a paper article or a power point shows content progressively and can incorporate interactive spatial contexts. I look forward to applying these techniques to future projects that combine data-driven insights with the art of storytelling.                                </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>          
           </div>
         </div> <!-- /.row -->
       </div> <!-- /.container -->
