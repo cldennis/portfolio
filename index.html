@@ -1,194 +1,114 @@
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
-<!-- 
-THEME: Phantom - Bootstrap Portfolio Template
-VERSION: 1.0.0
-AUTHOR: Themefisher
-
-HOMEPAGE: https://themefisher.com/products/phantom-best-bootstrap-portfolio-template/
-DEMO: https://demo.themefisher.com/phantom/
-GITHUB: https://github.com/themefisher/Phantom-Bootstrap-Portfolio-Template
-
-WEBSITE: https://themefisher.com
-TWITTER: https://twitter.com/themefisher
-FACEBOOK: https://www.facebook.com/themefisher
--->
-
 <!DOCTYPE html>
-<html lang="zxx">
-<head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+            <title></title>
 
-  <!-- ** Basic Page Needs ** -->
-  <meta charset="utf-8">
-  <title>Christina Dennis</title>
+        <!--Custom stylesheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <!--External stylesheets-->
+        <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <!--Google Fonts preloading-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <!--Selected Google Fonts-->
+          <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Spinnaker&display=swap" rel="stylesheet">
 
-  <!-- ** Mobile Specific Metas ** -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Portfolio HTML Template">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="author" content="Themefisher">
-  <meta name="generator" content="Themefisher Html5 Portfolio Template v1.0">
-  
-  <!-- theme meta -->
-  <meta name="theme-name" content="phantom" />
-
-  <!-- Essential Stylesheets -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800">
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/animate.css">
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-  <link rel="stylesheet" href="plugins/themefisher-fonts/css/themefisher-fonts.min.css">  
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Theme Stylesheet -->
-  <link rel="stylesheet" href="#" id="color-changer">
-  
-  <!--Website Bar Icon-->
-  <link rel="icon" href="images/favicon.png" >
-
-</head>
-<body><!-- set class="dark" on body tag for DARK-THEME -->
-
-<main class="site-wrapper">
-  <div class="pt-table">
-    <div class="pt-tablecell page-home relative" style="background-image: url('images/banner.jpg');">
-      <div class="overlay"></div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-            <!-- <div class="page-title home text-center" style="position: relative; padding: 40px; background-image: url('images/imags.png'); background-size: cover; background-position: center; color: rgb(45, 38, 45);"> -->
-            <div class="page-title home text-center">
-              <img src="images/christina.png">
-              <p>Hi! I'm Christina! I'm currently a graduate student at the University of Wisconsin - Madison at the Gibbs Land Use and Environment Lab. I'm interested in spatial data science, cartography, visual storytelling and environmental history. I'm particularly interested in land use change and conservation in the United States! </p>
+    </head>
+    <body>
+        <!--Splash Screen. This will pop-up at the start of the tour.-->
+        <div class="modal" id="splash-modal">
+            <div class="modal-dialog" id="splash-dialogue">
+                <div class="modal-content" id="splash-content">
+                    <div class="modal-header">
+                        <div class="col-md-10 offset-md-1 col-sm-12 col-12" id="splash-title-container">
+                        </div>
+                    </div>
+                    <div class="modal-body col-md-10 offset-md-1 col-sm-12 col-12" id="splash-body">                       
+                        <!--Title of the tour.-->
+                        <h1 id="splash-title" class="modal-title">Wisconsin Avenue. How did you get here?</h1>
+                        <!--Add additional content here—photos, videos, text, etc.!-->
+                        <!--Introductory text of the tour.-->
+                        <p> <img id='stop-img' src='img/capitol.JPG'></p>
+                        <p>Welcome to Wisconsin Avenue. Before you read the rest of this text, I invite you to gaze at the water and take a deep breath.
+                        <br></br>I’ll be explaining what I see as I take this tour, but depending on the season, the weather, the traffic, the events at the Edgewater, you’ll have a different experience from me. This tour is going to be mostly about plants, but I'll start with some context to hold onto as you traverse.
+                        </p>
+                        <!--Button to start the tour.-->
+                        <button type="button" id="start" class="btn btn-secondary" data-bs-dismiss="modal">Start Tour</button>
+                    </div>
+                </div>
             </div>
-            <div class="hexagon-menu clear">
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="about.html" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <img src="images/sci_white.png">
-                    </span>
-                    <span class="title">About</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1f311c"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="services.html" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <img src="images/sci_white.png">
-                    </span>
-                    <span class="title">Research</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1f311c"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="works.html" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <img src="images/sci_white.png">
-                    </span>
-                    <span class="title">Maps</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1f311c"></path>
-                  </svg>
-                </a>
-              </div>
-              <div class="hexagon-item">
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="hex-item">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <a href="resume.html" class="hex-content">
-                  <span class="hex-content-inner">
-                    <span class="icon">
-                      <img src="images/sci_white.png">
-                    </span>
-                    <span class="title">Resume</span>
-                  </span>
-                  <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1f311c"></path>
-                  </svg>
-                </a>
-              </div>
-            </div> <!-- /.hexagon-menu -->
+        </div>    
+        <!--Navigation bar-->
+        <nav class="tour-navbar navbar navbar-expand-lg">
+          <div class="container-fluid">
+          <!--Title of the tour-->
+            <a class="navbar-brand" href="#">Wisconsin Avenue Plant Neighbors</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <!--Navigation menu-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+              <!--About button (opens the splash screen)-->
+                <li class="nav-item">
+                  <a class="nav-link about" aria-current="page" href="#">Introduction</a>
+                </li>
+              <!--Stops button—allows users to view all the stops of the tour-->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Places
+                  </a>
+                  <ul class="dropdown-menu"></ul>                
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-          </div> <!-- /.col-xs-12 -->
+        <!--Template for a tour stop. When users tap a stop, this screen will popup, filled with content based on the selected stop.-->
+        <div class="modal" id="stop-modal">
+            <div class="modal-dialog" id="stop-dialogue">
+                <div class="modal-content" id="stop-content">
+                    <div class="modal-header">
+                        <div class="col-md-8 offset-md-2 col-sm-12 col-12" id="title-container">
+                            <!--This empty element will display with the title of the stop.-->
+                            <h1 class="modal-title" id="stop-title"></h1>
+                            <!--Button for playing a spoken version of the tour.-->
+                        </div>
+                        <!--Button to close the tour stop.-->
+                        <button type="button" id="x" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!--This element will hold the stop content, inlcuding the stop text and image.-->
+                    <div class="modal-body col-md-8 offset-md-2 col-sm-12 col-12" id="stop-body"></div>
+                    <!--The area at the bottom of the stop.-->
+                    <div id="stop-footer" class="modal-footer">
+                        <!--Button to return to the previous stop.-->
+                        <button type="button" id="prev" class="btn-secondary close" data-bs-dismiss="modal">Prev</button>
+                        <!--Button to advance to the next stop.-->
+                        <button type="button" id="next" class="btn-secondary close" data-bs-dismiss="modal">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        
+        <!--Map Element-->
+        <!--Replace data-basemap and data-attribution with a parameters from Leaflet providers demo: https://leaflet-extras.github.io/leaflet-providers/preview/.-->
+        <div id="map" 
+            data-basemap="https://api.mapbox.com/styles/v1/christinadennis/cm3xk1drn00dx01qqfw0xclx8/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiY2hyaXN0aW5hZGVubmlzIiwiYSI6ImNrdTdnNjd4MjAwYmcyb3AwanFpNTVyemsifQ.n01Z8r9A2w4JFB36n2X1jQ"
+            data-attribution='© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://labs.mapbox.com/contribute/" target="_blank">Improve this map</a></strong>'>
+            <div class="stop-menu"></div>
+        </div>
+        <!--Button to center a user's location on the map.-->
+        <button class="location-button">Where am I?</button>
 
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-
-    </div> <!-- /.pt-tablecell -->
-  </div> <!-- /.pt-table -->
-</main> <!-- /.site-wrapper -->
-
-
-<!-- 
-Essential Scripts
-=====================================-->
-<script src="plugins/jquery-2.2.4.min.js"></script>
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/jquery.nicescroll.min.js"></script>
-<script src="plugins/isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/slick/slick.min.js"></script>
-
-<script src="js/script.js"></script>
-
-</body>
+        <!--External scripts-->
+        <script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="lib/papaparse.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.bundle.min.js"></script>
+        <!--Custom scripts-->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
 </html>
