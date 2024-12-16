@@ -405,7 +405,7 @@ label {
 }
 .hexagon-item:hover .hex-item div::before,
 .hexagon-item:hover .hex-item div::after {
-  background-color: #c9b234;
+  background-color: #eca650;
 }
 .hexagon-item:hover .hex-content svg {
   transform: scale(0.97);
@@ -902,7 +902,7 @@ label {
   fill: #eca650;
 }
 .service-hex:hover .content {
-  width: 135%;
+  width: 105%;
 }
 .service-hex:hover p {
   height: 72px;
