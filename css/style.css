@@ -23,6 +23,10 @@ button:hover{
     background:rgb(210, 205, 210);
 }
 
+.move-x-button {
+    position: absolute; /* Position relative to the container */
+    right: 7%; /* Move it 5% away from the right */
+}
 /*MAP INTERFACE*/
 /*MAP*/
 #map{
